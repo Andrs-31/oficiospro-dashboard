@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-PA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tablero de Comunicación y Seguimiento de OficiosPro. Taller #4, Universidad Tecnológica de Panamá.">
+  <title>Tablero de Comunicación y Seguimiento de OficiosPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado-sitio" id="inicio">
+    <div class="barra-superior">
+      <a class="marca" href="#inicio" aria-label="OficiosPro, ir al inicio">
+        <img class="logo-marca" src="logo.svg" alt="OficiosPro" height="52">
+      </a>
+
+      <nav class="nav-anclas" aria-label="Secciones del tablero">
+        <a href="#seccion-a">A. Proyecto</a>
+        <a href="#seccion-b">B. Indicadores</a>
+        <a href="#seccion-c">C. Comunicación</a>
+        <a href="#seccion-d">D. Próximos pasos</a>
+      </nav>
+
+      <div class="acciones-encabezado">
+        <button type="button" id="btn-presentacion" class="btn btn-secundario">Modo presentación</button>
+        <button type="button" id="btn-imprimir" class="btn btn-primario">Imprimir / Guardar PDF</button>
+      </div>
+    </div>
+
+    <p class="pista-presentacion" id="pista-presentacion" hidden>
+      Modo presentación activo. Usa las flechas ← → para resaltar una sección. Esc para salir.
+    </p>
+  </header>
+
+  <main id="contenido">
+    <section class="seccion" id="seccion-a" data-seccion="0" aria-labelledby="titulo-a">
+      <p class="etiqueta-seccion">Sección A</p>
+      <h1 id="titulo-a">Tablero de Comunicación y Seguimiento de OficiosPro</h1>
+      <div id="encabezado-proyecto"></div>
+    </section>
+
+    <section class="seccion" id="seccion-b" data-seccion="1" aria-labelledby="titulo-b">
+      <p class="etiqueta-seccion">Sección B</p>
+      <h2 id="titulo-b">Indicadores visuales</h2>
+      <p class="intro-seccion">KPI medibles del propio proyecto: avance Kanban, cronograma, riesgos, calidad, presupuesto y uso de la plataforma.</p>
+      <div class="grid" id="kpis"></div>
+      <div class="grid" id="visualizaciones"></div>
+    </section>
+
+    <section class="seccion" id="seccion-c" data-seccion="2" aria-labelledby="titulo-c">
+      <p class="etiqueta-seccion">Sección C</p>
+      <h2 id="titulo-c">Panel de comunicación</h2>
+      <p class="intro-seccion">Quién comunica, qué informa, por qué canal, con qué frecuencia y a quién, según el plan de interesados de OficiosPro.</p>
+      <div id="panel-comunicacion"></div>
+    </section>
+
+    <section class="seccion" id="seccion-d" data-seccion="3" aria-labelledby="titulo-d">
+      <p class="etiqueta-seccion">Sección D</p>
+      <h2 id="titulo-d">Observaciones y próximos pasos</h2>
+      <p class="intro-seccion">Retroalimentación del equipo, lecciones de los retos reales y acciones con responsable, fecha y prioridad.</p>
+      <div class="grid" id="cierre"></div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Universidad Tecnológica de Panamá · Licenciatura en Desarrollo y Gestión de Software · Taller #4: Plan de Comunicación</p>
+    <p>OficiosPro · Tablero estático de seguimiento · Fecha de corte según <code>data.js</code></p>
+  </footer>
+
+  <noscript>
+    <p class="aviso-js">Este tablero necesita JavaScript para calcular indicadores y dibujar los gráficos. Actívalo para ver el contenido.</p>
+  </noscript>
+
+  <script src="data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

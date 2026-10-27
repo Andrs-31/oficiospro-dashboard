@@ -15,10 +15,6 @@ Los gráficos usan Chart.js por CDN, así que hace falta conexión a internet la
 
 Cambia **solo** `data.js`. No toques `app.js` salvo que quieras umbrales (objeto `UMBRALES` al inicio).
 
-Busca los comentarios `// REEMPLAZAR` y sustituye los valores de ejemplo por los reales del proyecto (fechas, conteos Kanban, riesgos, calidad, presupuesto, uso, integrantes y próximos pasos).
-
-No agregues claves nuevas ni renombres las existentes: el tablero espera exactamente esa estructura.
-
 ## Cómo desplegarlo en Vercel
 
 No hay comando de build. Framework Preset = **Other**.
